@@ -8,6 +8,7 @@
 
 <script>
 import test from './components/Test'
+import users from './components/Users'
 
 export default {
   name: 'App',
