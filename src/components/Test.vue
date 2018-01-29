@@ -22,9 +22,11 @@
 
         <hr/>
 
-        <button v-on:click="switchName()">Switch Name</button>
+        <button v-on:click="switchName()">Switch Name</button> <br>
 
-        <input type="text" v-model="user.first_name"/>
+        <label>Full Name: {{fullName}}</label> <br>
+        <label>First Name: </label><input type="text" v-model="user.first_name"/> <br>
+        <label>Last Name: </label><input type="text" v-model="user.last_name"/>
   </div>
 </template>
 
@@ -59,6 +61,11 @@
             },
             switchName: function () {
                 this.showName = !this.showName;
+            }
+        },
+        computed: {
+            fullName: function () {
+                return this.user.first_name + " " + this.user.last_name;
             }
         } 
     }
