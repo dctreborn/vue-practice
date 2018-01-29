@@ -3,6 +3,8 @@
       <h1>
           {{title}}
       </h1>
+      <input type="text" v-model="title"><br/>
+      
       <p v-if="showName">{{user.first_name}}</p>
       <p v-else="showName">Gud</p>
       <p v-text="user.last_name"/>
