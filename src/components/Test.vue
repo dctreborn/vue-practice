@@ -9,7 +9,7 @@
 
       <p v-if="showName">{{user.first_name}}</p>
       <p v-else="showName">Gud</p>
-      
+
       <p v-text="user.last_name"/>
 
       <span v-html="html"/>
@@ -17,6 +17,8 @@
       <ul>
           <li v-for="item in items">{{item.title}}</li>
       </ul>
+
+      <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit">
   </div>
 </template>
 
@@ -42,6 +44,12 @@
         methods: {
             greet: function(greeting){
                 alert(greeting);
+            },
+            pressKey: function (e) {
+                console.log(e.target.value);   
+            },
+            enterHit: function () {
+                console.log("You hit enter");
             }
         } 
     }
