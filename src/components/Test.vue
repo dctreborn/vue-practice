@@ -1,24 +1,30 @@
 <template>
   <div class="test">
-      <h1>
-          {{title}}
-      </h1>
-      <input type="text" v-model="title"><br/>
+        <h1>
+            {{title}}
+        </h1>
+        <input type="text" v-model="title"><br/>
 
-      <button v-on:click="greet('Hello World')">Say Greeting</button>
+        <button v-on:click="greet('Hello World')">Say Greeting</button>
 
-      <p v-if="showName">{{user.first_name}}</p>
-      <p v-else="showName">Gud</p>
+        <p v-if="showName">{{user.first_name}}</p>
+        <p v-else="showName">Gud</p>
 
-      <p v-text="user.last_name"/>
+        <p v-text="user.last_name"/>
 
-      <span v-html="html"/>
+        <span v-html="html"/>
 
-      <ul>
-          <li v-for="item in items">{{item.title}}</li>
-      </ul>
+        <ul>
+            <li v-for="item in items">{{item.title}}</li>
+        </ul>
 
-      <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit">
+        <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit">
+
+        <hr/>
+
+        <button v-on:click="switchName()">Switch Name</button>
+
+        <input type="text" v-model="user.first_name"/>
   </div>
 </template>
 
@@ -50,6 +56,9 @@
             },
             enterHit: function () {
                 console.log("You hit enter");
+            },
+            switchName: function () {
+                this.showName = !this.showName;
             }
         } 
     }
