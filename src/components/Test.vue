@@ -27,12 +27,20 @@
         <label>Full Name: {{fullName}}</label> <br>
         <label>First Name: </label><input type="text" v-model="user.first_name"/> <br>
         <label>Last Name: </label><input type="text" v-model="user.last_name"/>
+        <hr/>
+        <h2>{{msg}}</h2>
   </div>
 </template>
 
 <script>
     export default {
         name: "test",
+        props: {
+            msg: {
+                type: String,
+                default: "foobar"
+            }
+        },
         data(){
             return{
                 title: 'Hello World',

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--insert bootstrap here-->
-    <test/>
+    <test msg="Hello"/>
     <h2>testeststests</h2>
   </div>
 </template>
