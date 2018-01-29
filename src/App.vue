@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <!--insert bootstrap here-->
     <test/>
+    <h2>testeststests</h2>
   </div>
 </template>
 
