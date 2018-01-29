@@ -5,6 +5,7 @@
       </h1>
       <p>{{user.first_name}}</p>
       <p v-text="user.last_name"/>
+      <span v-html="html"/>
   </div>
 </template>
 
@@ -17,7 +18,8 @@
                 user: {
                     first_name: "john",
                     last_name: "doe"
-                }
+                },
+                html: 'V-test'
             }            
         }
     }
