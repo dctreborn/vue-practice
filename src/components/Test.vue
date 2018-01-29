@@ -7,6 +7,9 @@
       <p v-else="showName">Gud</p>
       <p v-text="user.last_name"/>
       <span v-html="html"/>
+      <ul>
+          <li v-for="item in items">{{item.title}}</li>
+      </ul>
   </div>
 </template>
 
@@ -21,7 +24,12 @@
                     last_name: "doe"
                 },
                 html: 'V-test',
-                showName: false
+                showName: false,
+                items: [
+                    {title: "Item One"},
+                    {title: "Item Two"},
+                    {title: "Item Three"},
+                ]
             }            
         }
     }
