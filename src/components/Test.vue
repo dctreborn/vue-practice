@@ -4,11 +4,16 @@
           {{title}}
       </h1>
       <input type="text" v-model="title"><br/>
-      
+
+      <button v-on:click="greet('Hello World')">Say Greeting</button>
+
       <p v-if="showName">{{user.first_name}}</p>
       <p v-else="showName">Gud</p>
+      
       <p v-text="user.last_name"/>
+
       <span v-html="html"/>
+
       <ul>
           <li v-for="item in items">{{item.title}}</li>
       </ul>
@@ -30,10 +35,15 @@
                 items: [
                     {title: "Item One"},
                     {title: "Item Two"},
-                    {title: "Item Three"},
-                ]
-            }            
-        }
+                    {title: "Item Three"}
+                ]                
+            }           
+        },
+        methods: {
+            greet: function(greeting){
+                alert(greeting);
+            }
+        } 
     }
 </script>
 
