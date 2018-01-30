@@ -27,21 +27,22 @@
             return {
                 newUser: {},
                 users: [
-                    {
-                        name: "John Doe",
-                        email: "jdoe@g.com",
-                        contacted: false
-                    },
-                    {
-                        name: "Steve",
-                        email: "steve@g.com",
-                        contacted: false
-                    },
-                    {
-                        name: "Grea",
-                        email: "grea@g.com",
-                        contacted: false
-                    }
+                    // {
+                    //     name: "John Doe",
+                    //     email: "jdoe@g.com",
+                    //     contacted: false
+                    // },
+                    // {
+                    //     name: "Steve",
+                    //     email: "steve@g.com",
+                    //     contacted: false
+                    // },
+                    // {
+                    //     name: "Grea",
+                    //     email: "grea@g.com",
+                    //     contacted: false
+                    // }
+
                 ]
             }
         },
@@ -62,7 +63,7 @@
         created: function(){
             this.$http.get("https://jsonplaceholder.typicode.com/users")
                 .then(function(resp){
-                    console.log(resp);
+                    this.users = resp.data;
                 });
         }
     }
