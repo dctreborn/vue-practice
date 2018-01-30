@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <!--insert bootstrap here-->
-    <test msg="Hello"/>
-    <h2>testeststests</h2>
+    <!-- <test msg="Hello"/> -->
+    <users></users>
+    <!-- <h2>testeststests</h2> -->
   </div>
 </template>
 
@@ -13,7 +14,7 @@ import users from './components/Users'
 export default {
   name: 'App',
   components: {
-    test
+    test, users
   }
 }
 </script>
