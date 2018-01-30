@@ -10,7 +10,10 @@
 
         <ul>
             <li v-for="user in users">
-                {{user.name}}: {{user.email}}
+                <input type="checkbox" class="toggle" v-model="user.contacted">
+                <span :class="{contacted: user.contacted}">
+                    {{user.name}}: {{user.email}}
+                </span>
             </li>
         </ul>
   </div>
@@ -59,5 +62,7 @@
 </script>
 
 <style scoped>
-
+    .contacted{
+        text-decoration: line-through;
+    }
 </style>
