@@ -59,8 +59,11 @@
                 this.users.splice(this.users.indexOf(user), 1);
             }
         },
-        computed: {
-
+        created: function(){
+            this.$http.get("https://jsonplaceholder.typicode.com/users")
+                .then(function(resp){
+                    console.log(resp);
+                });
         }
     }
 </script>
